@@ -1,69 +1,304 @@
-  <h2>本科生与研究助理</h2>
+<!DOCTYPE html>
+<html lang="zh-CN">
 
-  <div style="display: flex; gap: 25px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 40px;">
-    <img src="../assets/images/chenmiao.jpg"
-         alt="陈淼"
-         style="width: 120px; height: 150px; object-fit: cover; border-radius: 6px; display: block;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div style="flex: 1; min-width: 240px;">
-      <h3 style="margin-top: 0;">陈淼</h3>
-      <p>
-        <strong>本科生</strong><br>
-        研究方向: 蛋白质化学生物学<br>
-        Email: <a href="mailto:3104500089@qq.com">3104500089@qq.com</a>
-      </p>
+  <title>团队成员 | Zhang Lab</title>
+
+  <link rel="stylesheet" href="../assets/css/page.css">
+
+  <style>
+    /* 单个成员卡片 */
+    .member-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    /* 成员照片 */
+    .member-photo {
+      width: 120px;
+      height: 150px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 6px;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    /* 成员文字区域 */
+    .member-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .member-info h3 {
+      margin: 0 0 16px;
+    }
+
+    .member-info p {
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    /* 本科生区域：两栏布局 */
+    .undergraduate-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 60px;
+      row-gap: 45px;
+      margin-bottom: 50px;
+    }
+
+    /* 两栏中的成员不再使用额外的底部间距 */
+    .undergraduate-grid .member-card {
+      margin-bottom: 0;
+    }
+
+    /* 防止邮箱过长时撑破布局 */
+    .member-info a {
+      overflow-wrap: anywhere;
+    }
+
+    /* 手机或窄屏设备自动显示为一栏 */
+    @media (max-width: 850px) {
+      .undergraduate-grid {
+        grid-template-columns: 1fr;
+        row-gap: 35px;
+      }
+    }
+
+    /* 特别窄的手机屏幕改成上下结构 */
+    @media (max-width: 520px) {
+      .member-card {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="page-header">
+    <a href="index.html">ZHANG LAB</a>
+
+    <nav>
+      <a href="research.html">研究方向</a>
+      <a href="team.html">团队成员</a>
+      <a href="publications.html">论文发表</a>
+      <a href="join-us.html">加入我们</a>
+      <a href="news.html">新闻动态</a>
+      <a href="contact.html">联系方式</a>
+      <a href="../team.html">English</a>
+    </nav>
+  </header>
+
+  <main class="content">
+
+    <h1>团队成员</h1>
+
+    <!-- 课题组负责人 -->
+    <h2>课题组负责人</h2>
+
+    <div class="person">
+      <img src="../assets/images/pi.jpg" alt="张帅兵教授">
+
+      <div>
+        <h3>张帅兵教授</h3>
+        <p>课题组长</p>
+        <p>中国药科大学中药学院</p>
+        <p>
+          Email:
+          <a href="mailto:shuaibing.zhang@cpu.edu.cn">
+            shuaibing.zhang@cpu.edu.cn
+          </a>
+        </p>
+
+        <p>
+          <a class="read-more" href="people/shuaibing-zhang.html">
+            阅读更多 ...
+          </a>
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div style="display: flex; gap: 25px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 40px;">
-    <img src="../assets/images/mulijia.jpg"
-         alt="牟立佳"
-         style="width: 120px; height: 150px; object-fit: cover; border-radius: 6px; display: block;">
+    <!-- 博士后 -->
+    <h2>博士后</h2>
 
-    <div style="flex: 1; min-width: 240px;">
-      <h3 style="margin-top: 0;">牟立佳</h3>
-      <p>
-        <strong>本科生</strong><br>
-        研究方向: 微生物互作化学<br>
-        Email: <a href="mailto:849044253@qq.com">849044253@qq.com</a>
-      </p>
+    <div class="member-card">
+      <img
+        class="member-photo"
+        src="../assets/images/diaohaixin.jpg"
+        alt="刁海欣"
+      >
+
+      <div class="member-info">
+        <h3>刁海欣</h3>
+
+        <p>
+          <strong>博士后</strong><br>
+          研究方向：药用植物根际微生物的化学生态学研究<br>
+          Email:
+          <a href="mailto:dhxtx1216@163.com">
+            dhxtx1216@163.com
+          </a>
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div style="display: flex; gap: 25px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 40px;">
-    <img src="../assets/images/suzihang.jpg"
-         alt="苏子航"
-         style="width: 120px; height: 150px; object-fit: cover; border-radius: 6px; display: block;">
+    <!-- 博士研究生 -->
+    <h2>博士研究生</h2>
 
-    <div style="flex: 1; min-width: 240px;">
-      <h3 style="margin-top: 0;">苏子航</h3>
-      <p>
-        <strong>本科生</strong><br>
-        研究方向: 微生物互作化学<br>
-        Email: <a href="mailto:2939548124@qq.com">2939548124@qq.com</a>
-      </p>
+    <div class="member-card">
+      <img
+        class="member-photo"
+        src="../assets/images/chengqi.jpg"
+        alt="程琪"
+      >
+
+      <div class="member-info">
+        <h3>程琪</h3>
+
+        <p>
+          <strong>在读博士生</strong><br>
+          研究方向：植物根际微生物互作的化学机制研究<br>
+          Email:
+          <a href="mailto:1364313580@qq.com">
+            1364313580@qq.com
+          </a>
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div style="display: flex; gap: 25px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 40px;">
-    <img src="../assets/images/yangyu.jpg"
-         alt="杨玉"
-         style="width: 120px; height: 150px; object-fit: cover; border-radius: 6px; display: block;">
+    <!-- 硕士研究生 -->
+    <h2>硕士研究生</h2>
 
-    <div style="flex: 1; min-width: 240px;">
-      <h3 style="margin-top: 0;">杨玉</h3>
-      <p>
-        <strong>本科生</strong><br>
-        研究方向: 微生物互作化学<br>
-        Email: <a href="mailto:2169793202@qq.com">2169793202@qq.com</a>
-      </p>
+    <div class="member-card">
+      <img
+        class="member-photo"
+        src="../assets/images/wufeiwang.jpg"
+        alt="吴飞往"
+      >
+
+      <div class="member-info">
+        <h3>吴飞往</h3>
+
+        <p>
+          <strong>在读硕士生</strong><br>
+          研究方向：源于药用植物根际微生物的活性天然产物研究<br>
+          Email:
+          <a href="mailto:2056387453@qq.com">
+            2056387453@qq.com
+          </a>
+        </p>
+      </div>
     </div>
-  </div>
 
-  <h2>往届成员</h2>
-  <p>待更新。</p>
+    <!-- 本科生与研究助理 -->
+    <h2>本科生与研究助理</h2>
 
-</main>
+    <div class="undergraduate-grid">
+
+      <!-- 陈淼 -->
+      <div class="member-card">
+        <img
+          class="member-photo"
+          src="../assets/images/chenmiao.jpg"
+          alt="陈淼"
+        >
+
+        <div class="member-info">
+          <h3>陈淼</h3>
+
+          <p>
+            <strong>本科生</strong><br>
+            研究方向：蛋白质化学生物学<br>
+            Email:
+            <a href="mailto:3104500089@qq.com">
+              3104500089@qq.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 牟立佳 -->
+      <div class="member-card">
+        <img
+          class="member-photo"
+          src="../assets/images/mulijia.jpg"
+          alt="牟立佳"
+        >
+
+        <div class="member-info">
+          <h3>牟立佳</h3>
+
+          <p>
+            <strong>本科生</strong><br>
+            研究方向：微生物互作化学<br>
+            Email:
+            <a href="mailto:849044253@qq.com">
+              849044253@qq.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 苏子航 -->
+      <div class="member-card">
+        <img
+          class="member-photo"
+          src="../assets/images/suzihang.jpg"
+          alt="苏子航"
+        >
+
+        <div class="member-info">
+          <h3>苏子航</h3>
+
+          <p>
+            <strong>本科生</strong><br>
+            研究方向：微生物互作化学<br>
+            Email:
+            <a href="mailto:2939548124@qq.com">
+              2939548124@qq.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 杨玉 -->
+      <div class="member-card">
+        <img
+          class="member-photo"
+          src="../assets/images/yangyu.jpg"
+          alt="杨玉"
+        >
+
+        <div class="member-info">
+          <h3>杨玉</h3>
+
+          <p>
+            <strong>本科生</strong><br>
+            研究方向：微生物互作化学<br>
+            Email:
+            <a href="mailto:2169793202@qq.com">
+              2169793202@qq.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 往届成员 -->
+    <h2>往届成员</h2>
+    <p>待更新。</p>
+
+  </main>
 
 </body>
+
 </html>
