@@ -3,57 +3,134 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Team | Zhang Lab</title>
-  <link rel="stylesheet" href="assets/css/page.css">
-  
-  <!-- ========================================== -->
-  <!-- 1. 百度统计代码 (用于后台查看详细访客数据) -->
-  <!-- ========================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>张帅兵课题组 | Zhang Lab</title>
+
+  <link rel="stylesheet" href="../assets/css/home.css">
+
+  <!-- 百度统计：用于后台查看详细访客数据 -->
   <script>
     var _hmt = _hmt || [];
-    (function() {
+
+    (function () {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?650296df9166a7be2df862641f76c003";
-      var s = document.getElementsByTagName("script")[0]; 
+
+      var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
 
-  <!-- ========================================== -->
-  <!-- 2. 不蒜子统计代码 (用于在网页底部显示数字) -->
-  <!-- ========================================== -->
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-</head>
-<body>
-  
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>张帅兵课题组</title>
-  <link rel="stylesheet" href="../assets/css/home.css">
+  <!-- 不蒜子统计：用于显示网站访问量 -->
+  <script
+    async
+    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+
+  <!-- 页脚样式 -->
+  <style>
+    .site-footer {
+      margin: 0;
+      padding: 22px 5%;
+      color: rgba(255, 255, 255, 0.72);
+      background:
+        linear-gradient(
+          135deg,
+          #071821 0%,
+          #0b2630 55%,
+          #0c3038 100%
+        );
+      border-top: 1px solid rgba(80, 205, 208, 0.28);
+      font-size: 13px;
+      letter-spacing: 0.2px;
+    }
+
+    .footer-inner {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-copyright {
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    .footer-lab {
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 600;
+    }
+
+    .visitor-statistics {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+
+    .visitor-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 12px;
+      color: rgba(255, 255, 255, 0.72);
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 20px;
+    }
+
+    .visitor-number {
+      color: #62d5d4;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 800px) {
+      .site-footer {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .visitor-statistics {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <header class="site-header">
+
     <div class="lab-name">
       <a href="index.html">ZHANG LAB</a>
     </div>
 
     <nav class="main-nav">
-<nav class="main-nav">
-  <a href="../research.html">研究方向</a>
-  <a href="../team.html">团队成员</a>
-  <a href="../publications.html">论文发表</a>
-  <a href="../join-us.html">加入我们</a>
-  <a href="../news.html">新闻动态</a>
-  <a href="../contact.html">联系方式</a>
-  <a href="../index.html">English</a>
-</nav>
+      <a href="research.html">研究方向</a>
+      <a href="team.html">团队成员</a>
+      <a href="publications.html">论文发表</a>
+      <a href="join-us.html">加入我们</a>
+      <a href="news.html">新闻动态</a>
+      <a href="contact.html">联系方式</a>
+      <a href="../index.html">English</a>
     </nav>
+
   </header>
 
   <main class="hero">
+
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
@@ -61,32 +138,33 @@
       <h2>天然产物发现、微生物相互作用与合成生物学</h2>
     </div>
 
-</main>
+  </main>
 
   <footer class="site-footer">
 
     <div class="footer-inner">
 
       <p class="footer-copyright">
-        <span class="footer-lab">© 2026 Zhang Lab</span><br>
-        School of Traditional Chinese Pharmacy,
-        China Pharmaceutical University
+        <span class="footer-lab">© 2026 张帅兵课题组</span><br>
+        中国药科大学中药学院
       </p>
 
       <div class="visitor-statistics">
 
         <span id="busuanzi_container_site_pv"
               class="visitor-item">
-          Total visits
+          网站总访问量
           <span id="busuanzi_value_site_pv"
                 class="visitor-number">—</span>
+          次
         </span>
 
         <span id="busuanzi_container_page_pv"
               class="visitor-item">
-          Page visits
+          本页访问量
           <span id="busuanzi_value_page_pv"
                 class="visitor-number">—</span>
+          次
         </span>
 
       </div>
