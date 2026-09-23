@@ -3,9 +3,70 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Team | Zhang Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News | Zhang Lab</title>
   <link rel="stylesheet" href="assets/css/page.css">
   
+  <!-- ========================================== -->
+  <!-- 自定义样式：9宫格照片布局 (建议后续将此段移至 assets/css/page.css 底部) -->
+  <!-- ========================================== -->
+  <style>
+    /* 9宫格容器 */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 固定3列，每列等宽 */
+      gap: 20px 15px; /* 行间距20px，列间距15px */
+      margin: 20px 0 40px 0;
+    }
+
+    /* 单个照片+文字的包裹容器 */
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* 照片样式 */
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 1 / 1; /* 强制保持正方形比例 */
+      object-fit: cover; /* 裁剪图片以填满正方形，防止拉伸变形 */
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* 鼠标悬停图片时的轻微放大效果 */
+    .gallery-item img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* 图片下方的文字说明样式 */
+    .gallery-caption {
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+      margin-top: 10px;
+      line-height: 1.4;
+      font-weight: 500;
+      max-width: 100%;
+      word-wrap: break-word;
+    }
+
+    /* 响应式设计：在平板和手机上自动调整列数，保证移动端体验 */
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 平板显示2列 */
+      }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr; /* 手机显示1列 */
+      }
+    }
+  </style>
+
   <!-- ========================================== -->
   <!-- 1. 百度统计代码 (用于后台查看详细访客数据) -->
   <!-- ========================================== -->
@@ -24,13 +85,7 @@
   <!-- ========================================== -->
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </head>
-<body>
-  
-<head>
-  <meta charset="UTF-8">
-  <title>News | Zhang Lab</title>
-  <link rel="stylesheet" href="assets/css/page.css">
-</head>
+
 <body>
 
 <header class="page-header">
@@ -53,6 +108,68 @@
     <h2>Lab website launched</h2>
     <p class="date">2026-04-29</p>
     <p>Our lab website is now online.</p>
+    
+    <!-- ========================================== -->
+    <!-- 9宫格照片区域开始 -->
+    <!-- ========================================== -->
+    <h3 style="margin-top: 30px; margin-bottom: 10px; color: #333; border-left: 4px solid #0056b3; padding-left: 10px;">Lab Moments</h3>
+    <p style="color: #666; margin-bottom: 20px; font-size: 15px;">
+     Escape the Lab, Embrace the Vibe | Our Lab Retreat at Shecun Camp No.7</h2>
+    <p style="color: #666; margin-bottom: 20px; font-size: 12px;">
+      Our lab group temporarily put down experiments and literature, heading to Shecun Camp No.7 in Nanjing for a retreat. Transitioning from the rigor of research to the relaxation of the outdoors, we spent a fulfilling and joyful day!
+
+    </p>
+    
+    <div class="gallery-grid">
+      <!-- 照片 1 -->
+      <div class="gallery-item">
+        <img src="assets/images/photo1.jpg" alt="HPLC purification experiment">
+        <p class="gallery-caption">HPLC 分离纯化实验</p>
+      </div>
+      <!-- 照片 2 -->
+      <div class="gallery-item">
+        <img src="assets/images/photo2.jpg" alt="Weekly group meeting">
+        <p class="gallery-caption">每周课题组组会讨论</p>
+      </div>
+      <!-- 照片 3 -->
+      <div class="gallery-item">
+        <img src="assets/images/photo3.jpg" alt="New laboratory equipment">
+        <p class="gallery-caption">新引进的制备色谱仪</p>
+      </div>
+      <!-- 照片 4 -->
+      <div class="gallery-item">
+        <img src="assets/images/photo4.jpg" alt="Sample preparation">
+        <p class="gallery-caption">中药有效成分提取与制备</p>
+      </div>
+      <!-- 照片 5 -->
+      <div class="gallery-item">
+        <img src="assets/images/photo5.jpg" alt="Team building activity">
+        <p class="gallery-caption">2026年春季实验室团建</p>
+      </div>
+      <!-- 照片 6 -->
+      <div class="gallery-item">
+        <img src="assets/images/photo6.jpg" alt="Data analysis">
+        <p class="gallery-caption">实验数据分析与复盘</p>
+      </div>
+      <!-- 照片 7 -->
+      <div class="gallery-item">
+        <img src="assets/images/photo7.jpg" alt="Academic conference">
+        <p class="gallery-caption">团队成员参加全国药学大会</p>
+      </div>
+      <!-- 照片 8 -->
+      <div class="gallery-item">
+        <img src="assets/images/photo8.jpg" alt="Graduation ceremony">
+        <p class="gallery-caption">祝贺毕业生顺利答辩</p>
+      </div>
+      <!-- 照片 9 -->
+      <div class="gallery-item">
+        <img src="assets/images/photo9.jpg" alt="Lab environment">
+        <p class="gallery-caption">整洁明亮的实验室环境</p>
+      </div>
+    </div>
+    <!-- 9宫格照片区域结束 -->
+    <!-- ========================================== -->
+
   </article>
 
 </main>
