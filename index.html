@@ -30,6 +30,23 @@
 
   <!-- 页脚样式 -->
   <style>
+    /* 中间标题的宽度 */
+.hero .hero-content {
+  width: 92%;
+  max-width: 1400px;
+}
+
+/* 中间标题：缩小字号，保留英文大小写 */
+.hero .hero-content h1 {
+  font-size: clamp(26px, 3.2vw, 48px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  white-space: normal;
+  max-width: none;
+  margin: 0 0 20px;
+}
     .site-footer {
       margin: 0;
       padding: 22px 5%;
@@ -134,7 +151,7 @@
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-      <h1>ZHANG LAB</h1>
+      <h1>Microbial Interaction Chemistry Lab</h1>
 
       <h2>
         Natural Product Discovery, Microbial Interactions
